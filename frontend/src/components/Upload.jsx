@@ -80,6 +80,7 @@ function Upload() {
     <>
       <Navbar />
       <div className="upload-container">
+        <h2>Submit Your Vision</h2>
         <form encType="multipart/form-data" onSubmit={handleSubmit}>
           <div className="form-group file-area">
             <label htmlFor="img" className="form-label">

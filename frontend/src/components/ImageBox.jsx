@@ -12,26 +12,29 @@ function ImageBox() {
   const [imageSelected, setImageSelected] = useState([]);
 
   useEffect(() => {
-    fetch(`${BACKEND_URL}/api/image/${selectedId}`)
+    fetch(`${BACKEND_URL}/api/image/infos/${selectedId}`)
       .then((res) => res.json())
       .then((image) => {
         setImageSelected(image);
         setCurrentImageComments(image.comment);
       })
       .catch((err) => console.error(err));
-  }, [selectedId]);
+  }, []);
 
   return (
     <div>
       <Navbar />
-      <img
-        src={`${BACKEND_URL}/api/image/${imageSelected.img}`}
-        alt={selectedName.name}
-      />
-      <Comment
-        currentImageComments={currentImageComments}
-        setCurrentImageComments={setCurrentImageComments}
-      />
+      <div className="content">
+        <img
+          src={`${BACKEND_URL}/api/image/${imageSelected.img}`}
+          alt={selectedName.name}
+          className="image"
+        />
+        <Comment
+          currentImageComments={currentImageComments}
+          setCurrentImageComments={setCurrentImageComments}
+        />
+      </div>
     </div>
   );
 }

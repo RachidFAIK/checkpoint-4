@@ -38,7 +38,11 @@ function Comment({ currentImageComments, setCurrentImageComments }) {
     };
 
     axios
-      .post(`${BACKEND_URL}/api/image/${selectedId}/comments/`, data, config)
+      .post(
+        `${BACKEND_URL}/api/image/infos/${selectedId}/comments/`,
+        data,
+        config
+      )
       .then((response) => {
         console.warn(response);
         setComment("");
@@ -63,11 +67,11 @@ function Comment({ currentImageComments, setCurrentImageComments }) {
 
   const deleteComment = (id) => {
     fetch(
-      `${BACKEND_URL}/api/image/${selectedId}/comments/${id}`,
+      `${BACKEND_URL}/api/image/infos/${selectedId}/comments/${id}`,
       DELETErequestOptions
     ).then((res) => {
       if (res) {
-        fetch(`${BACKEND_URL}/api/image/${selectedId}`)
+        fetch(`${BACKEND_URL}/api/image/infos/${selectedId}`)
           .then((response) => response.json())
           .then((image) => setCurrentImageComments(image.comment));
       }

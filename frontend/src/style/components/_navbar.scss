@@ -82,11 +82,7 @@ p{
 	font-family: 'Azeret Mono', monospace;
 }
 
-#logo p{
-	display: table-caption;
-	margin: 10px 0;
-	text-align: center;
-}
+
 
 #sign-in{
 	margin-left: auto;
@@ -120,27 +116,7 @@ p{
 	position: relative;
 }
 
-#products{
-	display: none;
-	position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--black);
-    padding: 10px 5px;
-    text-shadow: none;
-    cursor: pointer;
-    transition: 0.4s;
-}
 
-#products li{
-	color: gainsboro;
-	padding: 5px 0;
-	transition: color 0.3s;
-}
-
-#products li:hover{
-	color: white;
-}
 
 #responsive-menu .menu li:nth-of-type(2):hover #products{
 	display: flex;

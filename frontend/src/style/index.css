@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 .comment {
-  width: 98%;
+  width: 80vw;
   border: 1px solid;
   border-radius: 10px;
   margin: auto;
@@ -171,9 +171,16 @@ img:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-img {
-  width: 80%;
-  height: 80%;
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content .image {
+  width: 60%;
+  height: 60%;
+  left: 20px;
+  padding-bottom: 5%;
 }
 
 .loginContainer {
@@ -383,12 +390,6 @@ p {
   font-family: "Azeret Mono", monospace;
 }
 
-#logo p {
-  display: table-caption;
-  margin: 10px 0;
-  text-align: center;
-}
-
 #sign-in {
   margin-left: auto;
 }
@@ -419,28 +420,6 @@ p {
 
 #responsive-menu .menu li:nth-of-type(2) {
   position: relative;
-}
-
-#products {
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: var(--black);
-  padding: 10px 5px;
-  text-shadow: none;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-#products li {
-  color: gainsboro;
-  padding: 5px 0;
-  transition: color 0.3s;
-}
-
-#products li:hover {
-  color: white;
 }
 
 #responsive-menu .menu li:nth-of-type(2):hover #products {
@@ -758,4 +737,12 @@ body {
 
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin: 4%;
 }/*# sourceMappingURL=index.css.map */

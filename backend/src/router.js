@@ -39,14 +39,18 @@ router.post(
 );
 router.get("/api/image/:fileName", fileControllers.sendImage);
 router.get("/api/image", fileControllers.browse);
-router.get("/api/image/:id", fileControllers.read);
+router.get("/api/image/infos/:id", fileControllers.read);
 router.delete("/api/image/:id", fileControllers.destroy);
 
 // Gestion des commentaires
-router.put("/api/image/:id/comments/:id", commentsControllers.edit);
-router.post("/api/image/:id/comments", verifyToken, commentsControllers.add);
+router.put("/api/image/info/:id/comments/:id", commentsControllers.edit);
+router.post(
+  "/api/image/infos/:id/comments",
+  verifyToken,
+  commentsControllers.add
+);
 router.delete(
-  "/api/image/:id/comments/:id",
+  "/api/image/infos/:id/comments/:id",
   verifyToken,
   commentsControllers.destroy
 );
