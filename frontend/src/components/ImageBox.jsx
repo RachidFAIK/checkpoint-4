@@ -30,6 +30,7 @@ function ImageBox() {
           alt={selectedName.name}
           className="image"
         />
+        <h4 className="name">{imageSelected.name}</h4>
         <Comment
           currentImageComments={currentImageComments}
           setCurrentImageComments={setCurrentImageComments}

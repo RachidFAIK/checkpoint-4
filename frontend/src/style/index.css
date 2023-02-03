@@ -182,6 +182,9 @@ img:hover {
   left: 20px;
   padding-bottom: 5%;
 }
+.content .name {
+  margin-bottom: 5%;
+}
 
 .loginContainer {
   display: flex;
